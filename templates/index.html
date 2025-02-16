@@ -27,12 +27,15 @@
         <button class="mt-5 submit btn btn-light">Get Weather</button>
     </form>
     <div class="mt-4">
-        {% if data %}
+        {% if data and data.temperature is not none and data.icon is not none %}
             {{ data.main }}: {{ data.description }} <br>
             <img src="https://openweathermap.org/img/wn/{{ data.icon }}@2x.png" alt="Icon">
             {{ data.temperature }} C
+        {% elif data %}
+            <p class="text-danger">{{ data.main }}</p>
         {% endif %}
     </div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
