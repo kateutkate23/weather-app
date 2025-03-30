@@ -14,8 +14,8 @@ This is a simple weather application built with Flask. It is my first completed 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/kateutkate23/weather_app.git
-   cd weather_app
+   git clone https://github.com/kateutkate23/weather-app.git
+   cd weather-app
    ```
 
 2. **Create a virtual environment and activate it:**
